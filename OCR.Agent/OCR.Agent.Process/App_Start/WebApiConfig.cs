@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net.Http.Formatting;
 using System.Web.Http;
 
-namespace OCR.Agent.Web
+namespace OCR.Agent.Process
 {
     public static class WebApiConfig
     {
