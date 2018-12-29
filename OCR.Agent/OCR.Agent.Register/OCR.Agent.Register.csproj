@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C84B8D9B-9211-4788-82CC-6162DB43E20E}</ProjectGuid>
+    <ProjectGuid>{80AC9C06-E46C-4E68-82CC-ABF68C76AA84}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OCR.Common.Utilities</RootNamespace>
-    <AssemblyName>OCR.Common.Utilities</AssemblyName>
+    <RootNamespace>OCR.Agent.Register</RootNamespace>
+    <AssemblyName>OCR.Agent.Register</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,15 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,14 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppConfigIO.cs" />
-    <Compile Include="JSONIO.cs" />
+    <Compile Include="Constant\AppConfig.cs" />
+    <Compile Include="Constant\MasterRoute.cs" />
+    <Compile Include="MasterWebClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebClient.cs" />
+    <Compile Include="Connect.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="packages.config" />
+    <ProjectReference Include="..\..\OCR.Common\OCR.Common.Model\OCR.Common.Model.csproj">
+      <Project>{995c5158-135b-4364-b0a2-ae1f45c3d75a}</Project>
+      <Name>OCR.Common.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OCR.Common\OCR.Common.Utilities\OCR.Common.Utilities.csproj">
+      <Project>{c84b8d9b-9211-4788-82cc-6162db43e20e}</Project>
+      <Name>OCR.Common.Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

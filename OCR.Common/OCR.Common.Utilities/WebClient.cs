@@ -12,14 +12,12 @@ namespace OCR.Common.Utilities
     public static class WebClient
     {
         #region Public Members
-        public static async Task<HttpResponseMessage> Post<T>(Uri uri, string type, T payLoad)
+        public static async Task<HttpResponseMessage> Post<T>(Uri uri, T payload)
         {
             try
             {
                 HttpClient client = new HttpClient();
-                client.DefaultRequestHeaders.Accept.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(type));
-                HttpResponseMessage response = await client.PostAsJsonAsync(uri, payLoad);
+                HttpResponseMessage response = await client.PostAsJsonAsync(uri, payload);
                 return response;
             }
             catch (Exception ex)

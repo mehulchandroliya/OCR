@@ -79,6 +79,10 @@
       <Project>{c443cb50-0365-4f1e-9e61-e9b050d324b1}</Project>
       <Name>OCR.Agent.Process</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OCR.Agent.Register\OCR.Agent.Register.csproj">
+      <Project>{80ac9c06-e46c-4e68-82cc-abf68c76aa84}</Project>
+      <Name>OCR.Agent.Register</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
