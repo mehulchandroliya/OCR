@@ -14,7 +14,7 @@ namespace OCR.Common.Utilities
             return JsonConvert.SerializeObject(obj);
         }
 
-        public static T ToString<T>(string obj)
+        public static T ToObj<T>(string obj)
         {
             return JsonConvert.DeserializeObject<T>(obj);
         }

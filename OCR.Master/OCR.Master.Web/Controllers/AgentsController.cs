@@ -11,7 +11,7 @@ namespace OCR.Master.Web.Controllers
         [HttpPost]
         public IHttpActionResult Register(AgentConfig agentConfig)
         {
-            return Ok(new { Test = "Test is good" });
+            return Ok();
         }
     }
 }

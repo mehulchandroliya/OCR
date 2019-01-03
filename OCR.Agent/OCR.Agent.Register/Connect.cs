@@ -12,7 +12,7 @@ namespace OCR.Agent.Register
     public class Connect
     {
         #region Private Members
-        public AgentConfig GetAgentConfig() => new AgentConfig { Name = AppConfig.AgentName, AgentProjectConfigFile = AppConfig.AgentProjectConfigFile, AgentHostName = AppConfig.AgentHostName };
+        public AgentConfig GetAgentConfig() => new AgentConfig { Name = AppConfig.AgentName, AgentProjectConfigFile = AppConfig.AgentProjectConfigFile, AgentHostName = AppConfig.AgentHostName, AgentURL =  AppConfig.AgentURI };
         #endregion
 
         #region Public Members
